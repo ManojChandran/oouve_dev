@@ -42,10 +42,10 @@ RUN \
 RUN \
     ng new oouve
 
-# Add material package
+# Add Bootstrap/ AWS Cognito package
  RUN \
     cd oouve \
-    && npm install bootstrap@4.3.1
+    && npm install bootstrap --save
 
 # Set environment variables
 ENV HOME /root
