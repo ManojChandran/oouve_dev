@@ -132,6 +132,7 @@ Display the state of our manager
 
   $ docker run hellow-world
   $ docker images --digest
+
 # Digest and Image ID are two different ways of addressing the docker.
   $ docker images --filter "before=centos"
   $ docker images --filter "since=centos"
@@ -163,13 +164,13 @@ $ tar tvf mycentos.custom.tar | more
 $ docker import mycentos.custom.tar  localimport:centos6
 
 # Docker inspect
-$ docker image inspect centos:6
-$ docker image inspect centos:6 > centos.output
-$ docker image inspect centos:6 | grep ContainerConfig
-$ docker image inspect centos:6 --format '{{ .ContainerConfig }}'
-$ docker image inspect centos:6 --format '{{ json.ContainerConfig }}'
-$ docker image inspect centos:6 --format '{{ .ContainerConfig }}'
-$ docker image inspect centos:6 --format '{{ .RepoTags }}'
+  $ docker image inspect centos:6
+  $ docker image inspect centos:6 > centos.output
+  $ docker image inspect centos:6 | grep ContainerConfig
+  $ docker image inspect centos:6 --format '{{ .ContainerConfig }}'
+  $ docker image inspect centos:6 --format '{{ json.ContainerConfig }}'
+  $ docker image inspect centos:6 --format '{{ .ContainerConfig }}'
+  $ docker image inspect centos:6 --format '{{ .RepoTags }}'
 
 # Dockerfile   
   - create directory  
