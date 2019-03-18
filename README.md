@@ -42,10 +42,10 @@ When using Docker EE on certified platform, organizations are assured through Do
 
   $ yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce-repo
 
-  Enterprise Edition EE -repo
-    $ yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ee-repo
-    $ sudo yum update  
-    $ sudo yum install docker-ce  
+  Enterprise Edition EE -repo    
+    $ yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ee-repo    
+    $ sudo yum update      
+    $ sudo yum install docker-ce
     $ systemctl enable docker && systemctl start docker && systemctl status docker
 
 # Allow docker command as non root
