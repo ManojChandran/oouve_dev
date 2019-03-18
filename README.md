@@ -66,10 +66,10 @@ When using Docker EE on certified platform, organizations are assured through Do
 
 # Selecting storage driver:
   $ docker info | grep storage
-  $ cd /etc/docker
-  key.json -> demon.json
+  $ cd /etc/docker  
+  key.json -> demon.json  
   {
-   "storage driver" : "devicemapper"
+    "storage driver" : "devicemapper"  
   }
 
 # View the location where the device is
@@ -156,7 +156,7 @@ $ docker image history <image name> --no-trunc
 To see image layer file
 $ cd /var/lib/docker
 
-Docker CLI commands
+# Docker CLI commands
 $ docker image  -  will give the list of options
 - build - history - import - inspect - load - ls - prune - pull - push - rm - save - tag
 To package the image into a Tar file
@@ -164,7 +164,7 @@ $ docker image save myrepo/mycentos:ver2 > mycentos.custom.tar
 $ tar tvf mycentos.custom.tar | more
 $ docker import mycentos.custom.tar  localimport:centos6
 
-Docker inspect
+# Docker inspect
 $ docker image inspect centos:6
 $ docker image inspect centos:6 > centos.output
 $ docker image inspect centos:6 | grep ContainerConfig
@@ -173,8 +173,8 @@ $ docker image inspect centos:6 --format '{{ json.ContainerConfig }}'
 $ docker image inspect centos:6 --format '{{ .ContainerConfig }}'
 $ docker image inspect centos:6 --format '{{ .RepoTags }}'
 
-Dockerfile
-  - create directory
+# Dockerfile   
+  - create directory  
   - create Dockerfile <- D should be caps
   - FROM/LABEL/RUN
   - cmd -->  $ docker build -t customimage:v1 .
