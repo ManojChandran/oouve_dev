@@ -39,7 +39,6 @@ When using Docker EE on certified platform, organizations are assured through Do
 # Docker installation : Centos/Red Hat
   $ yum install -y yum-utils device-mapper-persistent-data lvm2 (device mapper for storage sub system
   Community edition ce-repo)
-
   $ yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce-repo
 
   Enterprise Edition EE -repo    
@@ -50,7 +49,7 @@ When using Docker EE on certified platform, organizations are assured through Do
 
 # Allow docker command as non root
   $ usermod -aG docker user  
-  $ exit (exit terminal and login back)
+  $ exit (exit terminal and login back)  
   $ ssh user@tcox1.mylabserver.com
 
 # Docker install: Debain/ubuntu
@@ -87,10 +86,10 @@ When using Docker EE on certified platform, organizations are assured through Do
   Setting logging to all the docker
   daemon.json
   {
-        "log-driver" : "syslog"
-        "log-opts" :{
-                      "syslog-address" : "udp://172.31.125.216:514"   
-         }
+    "log-driver" : "syslog"
+    "log-opts" :{
+      "syslog-address" : "udp://172.31.125.216:514"   
+    }
   }
 
 # Setting logging for particular container
@@ -100,12 +99,11 @@ When using Docker EE on certified platform, organizations are assured through Do
   Check the ip by typing ifconfig
   $ ifconfig
   $ docker swarm init --advertise-addr 172.31.4.218
-  Once swarm manager is initialized copy the Token created. Token is important for additional nodes
-  You can retrieve the token by using command
+Once swarm manager is initialized copy the Token created. Token is important for additional nodes you can retrieve the token by using command
   $ docker swarm join-token worker
-  Adding additional manager, this will get new token
+Adding additional manager, this will get new token  
   $ docker swarm join-token manager
-  Display the state of our manager
+Display the state of our manager
   $ docker node ls
   $ docker system info | more
 
