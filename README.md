@@ -37,9 +37,9 @@ When using Docker EE on certified platform, organizations are assured through Do
 - DTR 2.3+
 
 # Docker installation : Centos/Red Hat
-  $ yum install -y yum-utils device-mapper-persistent-data lvm2
-  - device mapper for storage sub system
-  Community edition ce-repo
+  $ yum install -y yum-utils device-mapper-persistent-data lvm2 (device mapper for storage sub system
+  Community edition ce-repo)
+
   $ yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce-repo
 
   Enterprise Edition ee-repo
@@ -51,8 +51,7 @@ When using Docker EE on certified platform, organizations are assured through Do
 
 # Allow docker command as non root
   $ usermod -aG docker user
-  $ exit
-  - and login back to
+  $ exit (exit terminal and login back)
   $ ssh user@tcox1.mylabserver.com
 
 # Docker install: Debain/ubuntu
