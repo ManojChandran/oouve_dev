@@ -42,26 +42,26 @@ When using Docker EE on certified platform, organizations are assured through Do
 
   $ yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce-repo
 
-  Enterprise Edition ee-repo
-  $ yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ee-repo
-
-  $ sudo yum update
-  $ sudo yum install docker-ce
-  $ systemctl enable docker && systemctl start docker && systemctl status docker
+  Enterprise Edition EE -repo
+    $ yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ee-repo
+    $ sudo yum update  
+    $ sudo yum install docker-ce  
+    $ systemctl enable docker && systemctl start docker && systemctl status docker
 
 # Allow docker command as non root
-  $ usermod -aG docker user
+  $ usermod -aG docker user  
   $ exit (exit terminal and login back)
   $ ssh user@tcox1.mylabserver.com
 
 # Docker install: Debain/ubuntu
   $ apt-get install apt-transport-https ca-certificates curl software-properties-common
-  $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg  | sudo apt-key add -
-  $ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-  $ apt-get update
-  $ apt-get install docker-ce
-  $ systemctl status
-  $ cd /var/run
+  $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg  | sudo apt-key add -  
+  $ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu
+  $(lsb_release -cs) stable"  
+  $ apt-get update  
+  $ apt-get install docker-ce  
+  $ systemctl status  
+  $ cd /var/run  
   $ usermod -aG docker user
 
 # Selecting storage driver:
