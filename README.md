@@ -9,9 +9,11 @@ Steps :
 5) Copy the any of the Dockerfile from the repository.
 6) Run the following command in Docker
 
-   $ docker build -t myTestBox .
-   $ docker run myTestBox
-   $ docker attach myTestBox
+   $ docker build -t mytestbox .
+
+   $ docker run mytestbox
+   
+   $ docker attach mytestbox
 
 # DOCKER
 
