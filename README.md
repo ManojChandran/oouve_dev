@@ -12,7 +12,7 @@ Steps :
    $ docker build -t mytestbox .
 
    $ docker run mytestbox
-   
+
    $ docker attach mytestbox
 
 # DOCKER
@@ -284,7 +284,8 @@ The minimum number of members of an assembly or society that must be present at 
 
   $ docker rm kind_boyd
   $ docker rm $(docker ps -a -q)
-  UCP and DTR
+
+# UCP and DTR
 
 Signing an Image:
 Signing an image is turning on Docker Content Trust.
