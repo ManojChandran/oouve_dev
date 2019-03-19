@@ -283,6 +283,7 @@ $ docker container inspect --format="{{.NetworkSettings.Netwroks.bridge.IPAddres
 The minimum number of members of an assembly or society that must be present at any of its meetings to make the proceedings of that meeting valid.
 
   $ docker rm kind_boyd
+  
   $ docker rm $(docker ps -a -q)
 
 # UCP and DTR
